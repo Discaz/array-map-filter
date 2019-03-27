@@ -27,6 +27,10 @@ Sortie attendue:
 */
 
 function filterOffensiveComments(comments, bannedWords) {
+  let filtre1 = comments.filter ( (tableComments) => {
+    return tableComments.toLowerCase().includes(bannedWords[0].toLowerCase()) === false})
+  let filtre2 = filtre1.filter ( (table2Comments) => {return table2Comments.toLowerCase().includes(bannedWords[1].toLowerCase())=== false})
+    return filtre2
 }
 
 // Ne pas modifier l'export

@@ -52,6 +52,17 @@ Tableau de sortie correspondant (toFixed transforme les nombres en chaînes)
 */
 
 function getCirclesProperties(radiuses) {
+  
+  return radiuses.map( (pouet) => {
+      pouet = {
+        radius : pouet,
+        circumference :  (2 * Math.PI * pouet),
+        surface : (Math.PI * pouet * pouet),
+      } 
+      pouet.circumference = pouet.circumference.toFixed(3)
+      pouet.surface = pouet.surface.toFixed(3)
+      return pouet
+    })
 }
 
 

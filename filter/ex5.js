@@ -39,6 +39,10 @@ Exemple d'entrée:
  */
 
 function searchWordFilter(items, search) {
+  return items.filter ( (elTable) => {
+    return elTable.toLowerCase().indexOf(search.toLowerCase()) >= 0 
+  })
+
 }
 
 // Ne pas modifier l'export
